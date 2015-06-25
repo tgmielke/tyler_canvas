@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Softphone for Desk.com</title>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//ajax.deskapi.com/libs/desk/opencti/0.0.2/interaction.js"></script>
+  <script type="text/javascript" src="/scripts/softphone.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/dialer.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/dialer-desk.css">
+  <script>
+    $.urlParam = function(name){
+      var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+      if (results==null){
+         return null;
+      }
+      else{
+         return results[1] || 0;
+      }
+    }
+
+    $(document).ready(function() {
+      $('#customerNumberVal').text($.urlParam('number'));
+      $('#customerEmailVal').text($.urlParam('email'));
+    });
+
+  </script>
+  <style>
+    #softphone {
+      margin-top: 65px;
+    }
+    #salesforceLogo {
+      display:inline; 
+      height:40px; 
+      width:55px;
+    }
+    #logoWrapper {
+      margin-top:-10px;
+      color:#FFF;
+    }
+  </style>
+
+</head>
+<body>
+  <nav id="navBar" class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="container">
+      <span id="logoWrapper" class="navbar-brand" href="#">
+        <img id="salesforceLogo" src="/salesforce-logo.png" style="" class="img-responsive" alt="Salesforce" /> Canvas Demo
+      </span>
+    </div>
+  </nav>
+  <div class="container" id="wrapper">
+    <div id="carousel-example-generic" class="carousel slide softphone">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div id="canvasContent" class="canvasContent">
+            <div class="row">
+              <div class="col-xs-12"></div>
+              <div class="col-xs-8">
+                <div><h4>Ecommerce Info</h4></div>
+                <!--<div><span><strong>Customer Number</strong>: </span><span id="customerNumberVal">[Not Found]</span></div>-->
+                <div><span><strong>Email: </strong></span><span id="customerEmailVal">[Not Found]</span></div>
+                <div><span><strong>Order: </strong></span><span>OX7-8784879234</span></div>
+                <div><span><strong>Date: </strong></span><span>10/27/2014</span></div>
+                <div><span><strong>Status: </strong></span><span>Pending</span></div>
+                <div><span><strong>Total: </strong></span><span>$249.72</span></div>
+              </div>
+              <div class="col-xs-3">
+                <div><h4>Actions</h4></div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#refundModal">Refund</button><br /><br /><button type="button" class="btn btn-warning" data-toggle="modal" data-target="#cancelModal">Cancel</button>
+              </div>
+            </div><!--row>
+                  <!-- Refund Modal -->
+                  <div class="modal fade" id="refundModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="color:#000;">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                          <h4 class="modal-title" id="myModalLabel">Process Refund</h4>
+                        </div>
+                        <div class="modal-body">
+                          This will process a refund for the full order value. Would you like to proceed?
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary" data-dismiss="modal">Proceed</button>
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Cancel Modal -->
+                  <div class="modal fade" id="cancelModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="color:#000;">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                          <h4 class="modal-title" id="myModalLabel">Cancel Order</h4>
+                        </div>
+                        <div class="modal-body">
+                          This will cancel the customer's order. Would you like to proceed?
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary" data-dismiss="modal">Proceed</button>
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+            
+          </div>
+        </div>
+        <div class="item">
+          <div id="canvasContent" class="canvasContent">
+              <img src="/herokuStatus.png" style="height:180px; width:320px; margin:0px; padding:0px;" />
+          </div>
+        </div>
+        <div class="item">
+            <div id="canvasContent3" class="canvasContent">
+                <br />
+                <div class="row">
+                  <div class="col-xs-1"></div>
+                  <div class="col-xs-6"><h4>Diagnostics</h4>Product: Flex<br />Version: 1.92<br />Battery: 36%<br />Status: Online</div>
+                  <div class="col-xs-2">
+                    <img src="/flex.png" style="height:141px; width:115px; margin:0px; padding:0px;" />
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div id="canvasContent4" class="canvasContent">
+                <br />
+                <div class="row">
+                  <div class="col-xs-12 bg-danger" style="color: #000000;">
+                    <h4>System-Wide Alert</h4>
+                    <p>This is a system-wide alert to all agents. We are experiencing a high customer request volume due to a new promotion. Please use your latest Macro "Promotion Info" to quickly answer any questions about the promotion.</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div id="canvasContent5" class="canvasContent">
+                <br />
+                <div class="row">
+                  <div class="col-xs-1"></div>
+                  <div class="col-xs-8">
+                    <img src="/deathStarExploding.gif" style="height:150px; width:245px; margin:0px; padding:0px;" />
+                  </div>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+
+          <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+      </ol>
+    </div>
+  </div><!-- /container -->
+</body>
+</html>
