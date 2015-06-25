@@ -1,0 +1,217 @@
+body {
+  background-color:#353c45;
+}
+
+#wrapper {
+  background-color:#353c45;
+  margin-top:55px;
+}
+
+#softphone {
+
+}
+
+.canvasContent {
+  text-align: left;
+  width: 320px;
+  margin: 0px auto 0px;
+  color: #fff;
+  height:235px;
+}
+
+#agent-status-controls {
+
+}
+
+.agent-status {
+
+}
+
+button {
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+button.agent-status {
+
+}
+
+@-webkit-keyframes pulse {
+
+}
+
+div.agent-status {
+
+}
+
+.agent-status:active, .agent-status:focus {
+
+}
+
+.agent-status[disabled] {
+  box-shadow: none;
+  opacity: 1;
+  text-shadow: none;
+}
+
+.agent-status.ready {
+  text-shadow: none;  
+  box-shadow: none;
+  opacity: 1;
+  color:#fff;
+  background-image:none;
+  background-color:#353c45;
+  border: 1px solid #59616d;
+}
+
+.agent-status.ready:hover {
+  background-image: none;
+  background-color: #0095de;
+}
+
+.agent-status.ready[disabled] {
+  text-shadow: none;  
+  box-shadow: none;
+  opacity: 1;
+  color:#fff;
+  background-image:none;
+  background-color:#00b15a;
+  border: 1px solid #59616d;
+}
+
+.agent-status.not-ready {
+  text-shadow: none;  
+  box-shadow: none;
+  opacity: 1;
+  color:#fff;
+  background-image:none;
+  background-color:#353c45;
+  border: 1px solid #59616d;
+}
+
+.agent-status.not-ready:hover {
+  background-image: none;
+  background-color: #0095de;
+}
+
+.agent-status.not-ready[disabled] {
+  text-shadow: none;  
+  box-shadow: none;
+  opacity: 1;
+  color:#fff;
+  background-image:none;
+  background-color:#ff2240;
+  border: 1px solid #59616d;
+}
+
+#dialer {
+
+}
+
+input {
+  background-color:#353c45;
+  border: 1px solid #59616d;
+  text-shadow: none;  
+  text-align: center;
+  box-shadow: none;
+  color:#ccc;
+}
+
+#number-entry {
+
+}
+
+.incoming input {
+
+}
+
+.incoming #dialer {
+
+}
+
+.softphone .incoming-call-status {
+
+}
+
+.incoming .incoming-call-status {
+
+}
+
+.number {
+  background-image: none;
+  background-color:#353c45;
+  border-bottom: 1px solid #59616d;
+  border-right: 1px solid #59616d;
+  text-shadow: none;
+  text-align: center;
+  box-shadow: none;
+}
+
+.numtxt {
+  text-transform: uppercase;
+}
+
+.number.ast {
+
+}
+
+.number:hover {
+  background-image: none;
+  background-color: #0095de;
+}
+
+.number:active {
+
+}
+
+#action-buttons button {
+
+}
+
+#action-buttons .call {
+  background-image:none;
+  background-color: #00b15a;
+
+}
+
+#action-buttons .answer, #action-buttons .hangup {
+
+}
+
+#action-buttons .hold, #action-buttons .unhold, #action-buttons .mute {
+
+}
+
+.mute {
+
+}
+
+.hold, .unhold {
+
+}
+
+#team-status .agents-status, #team-status .queues-status {
+  color:#ccc;
+}
+
+#team-status [class*="num"] {
+
+}
+
+#call-data, #callerid-entry {
+
+}
+
+.powered-by {
+  display:none;
+}
+
+.powered-by-dark {
+  display:block;
+  text-align: right;
+  padding: 10px 0;
+}
+
+img {
+
+}
